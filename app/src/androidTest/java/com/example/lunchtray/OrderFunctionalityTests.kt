@@ -173,10 +173,10 @@ class OrderFunctionalityTests : BaseTest() {
             .check(matches(withText(containsString("Subtotal: $10.00"))))
         // Check tax
         onView(withId(R.id.tax))
-            .check(matches(withText(containsString("Tax: $0.80"))))
+            .check(matches(withText(containsString("Tax: $0.08"))))
         // Check total
         onView(withId(R.id.total))
-            .check(matches(withText(containsString("Total: $10.80"))))
+            .check(matches(withText(containsString("Total: $10.08"))))
     }
 
     /**

@@ -17,10 +17,14 @@ package com.example.lunchtray.ui.order
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentAccompanimentMenuBinding
 import com.example.lunchtray.model.OrderViewModel
 
@@ -28,7 +32,7 @@ import com.example.lunchtray.model.OrderViewModel
  * [AccompanimentMenuFragment] allows people to add an accompaniment to their order or cancel the
  * order.
  */
-class AccompanimentMenuFragment : Fragment() {
+class   AccompanimentMenuFragment : Fragment() {
 
     // Binding object instance corresponding to the fragment_start_order.xml layout
     // This property is non-null between the onCreateView() and onDestroyView() lifecycle callbacks,
@@ -60,21 +64,39 @@ class AccompanimentMenuFragment : Fragment() {
             viewModel = sharedViewModel
             // TODO: initialize the AccompanimentMenuFragment variables
         }
+        binding.cancelButton.setOnClickListener {
+            cancelOrder()
+        }
+        binding.nextButton.setOnClickListener {
+            goToNextScreen()
+        }
+        setHasOptionsMenu(true)
+        val radioGroup:RadioGroup = binding.accompanimentOptions
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
+            checkedId.apply {
+                when(checkedId){
+                    R.id.bread->sharedViewModel.setAccompaniment("bread")
+                    R.id.berries -> sharedViewModel.setAccompaniment("berries")
+                    R.id.pickles -> sharedViewModel.setAccompaniment("pickles")
+                }
+            }
+        }
     }
 
     /**
      * Navigate to the checkout fragment.
      */
     fun goToNextScreen() {
-        // TODO: Navigate to the CheckoutFragment
+        findNavController().navigate(R.id.action_accompanimentMenuFragment_to_checkoutFragment)
     }
+
 
     /**
      * Cancel the order and start over.
      */
     fun cancelOrder() {
-        // TODO: Reset order in view model
-        // TODO: Navigate back to the [StartFragment] to start over
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_accompanimentMenuFragment_to_startOrderFragment)
     }
 
     /**

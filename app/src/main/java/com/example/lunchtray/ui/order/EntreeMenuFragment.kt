@@ -15,12 +15,18 @@
  */
 package com.example.lunchtray.ui.order
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentEntreeMenuBinding
 import com.example.lunchtray.model.OrderViewModel
 
@@ -57,23 +63,42 @@ class EntreeMenuFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            // TODO: initialize the EntreeMenuFragment variables
+            subtotalV = sharedViewModel.subtotal.value
         }
+        setHasOptionsMenu(true)
+        binding.cancelButton.setOnClickListener{
+            cancelOrder()
+        }
+        binding.nextButton.setOnClickListener {
+            goToNextScreen()
+        }
+        val radio = binding.entreeOptions
+        radio.setOnCheckedChangeListener{_, checkedId->
+            view.findViewById<RadioButton>(checkedId).apply {
+                when(checkedId){
+                    R.id.skillet -> sharedViewModel.setEntree("skillet")
+                    R.id.cauliflower -> sharedViewModel.setEntree("cauliflower")
+                    R.id.chili -> sharedViewModel.setEntree("chili")
+                    R.id.pasta -> sharedViewModel.setEntree("pasta")
+                }
+            }
+        }
+
     }
 
     /**
      * Navigate to the side menu fragment.
      */
     fun goToNextScreen() {
-        // TODO: Navigate to the SideMenuFragment
+        findNavController().navigate(R.id.action_entreeMenuFragment_to_sideMenuFragment)
     }
 
     /**
      * Cancel the order and start over.
      */
     fun cancelOrder() {
-        // TODO: Reset order in view model
-        // TODO: Navigate back to the [StartFragment] to start over
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_entreeMenuFragment_to_startOrderFragment)
     }
 
     /**
@@ -84,4 +109,9 @@ class EntreeMenuFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
+
 }
+
+

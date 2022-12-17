@@ -19,8 +19,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
+import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentSideMenuBinding
 import com.example.lunchtray.model.OrderViewModel
 
@@ -57,7 +61,25 @@ class SideMenuFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            // TODO: initialize the SideMenuFragment variables
+        }
+        binding.cancelButton.setOnClickListener {
+            cancelOrder()
+        }
+        binding.nextButton.setOnClickListener {
+            goToNextScreen()
+        }
+        setHasOptionsMenu(true)
+        val radioGroup:RadioGroup = binding.sideOptions
+        radioGroup.setOnCheckedChangeListener {_, checkedId ->
+            checkedId.apply {
+                Toast.makeText(requireContext(),"ASDDS",Toast.LENGTH_LONG).show()
+                when(checkedId){
+                    R.id.salad -> sharedViewModel.setSide("salad")
+                    R.id.soup -> sharedViewModel.setSide("soup")
+                    R.id.potatoes -> sharedViewModel.setSide("potatoes")
+                    R.id.rice -> sharedViewModel.setSide("rice")
+                }
+            }
         }
     }
 
@@ -65,15 +87,15 @@ class SideMenuFragment : Fragment() {
      * Navigate to the accompaniments menu fragment
      */
     fun goToNextScreen() {
-        // TODO: Navigate to the AccompanimentMenuFragment
+        findNavController().navigate(R.id.action_sideMenuFragment_to_accompanimentMenuFragment)
     }
 
     /**
      * Cancel the order and start over.
      */
     fun cancelOrder() {
-        // TODO: Reset order in view model
-        // TODO: Navigate back to the [StartFragment] to start over
+        sharedViewModel.resetOrder()
+        findNavController().navigate(R.id.action_sideMenuFragment_to_startOrderFragment)
     }
 
     /**

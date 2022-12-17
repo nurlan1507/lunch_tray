@@ -1,0 +1,287 @@
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+com.example.lunchtray.NavigationTests:
+INSTRUMENTATION_STATUS: test=navigate_to_start_order_from_checkout
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected:<2131231205> but was:<2131231204>
+at org.junit.Assert.fail(Assert.java:88)
+at org.junit.Assert.failNotEquals(Assert.java:834)
+at org.junit.Assert.assertEquals(Assert.java:118)
+at org.junit.Assert.assertEquals(Assert.java:144)
+at com.example.lunchtray.NavigationTests.navigate_to_start_order_from_checkout(NavigationTests.kt:200)
+
+INSTRUMENTATION_STATUS: stream=
+Error in navigate_to_start_order_from_checkout(com.example.lunchtray.NavigationTests):
+java.lang.AssertionError: expected:<2131231205> but was:<2131231204>
+at org.junit.Assert.fail(Assert.java:88)
+at org.junit.Assert.failNotEquals(Assert.java:834)
+at org.junit.Assert.assertEquals(Assert.java:118)
+at org.junit.Assert.assertEquals(Assert.java:144)
+at com.example.lunchtray.NavigationTests.navigate_to_start_order_from_checkout(NavigationTests.kt:200)
+
+INSTRUMENTATION_STATUS: test=navigate_to_start_order_from_checkout
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=navigate_to_start_order_from_entree_menu
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=2
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: expected:<2131231205> but was:<2131231204>
+at org.junit.Assert.fail(Assert.java:88)
+at org.junit.Assert.failNotEquals(Assert.java:834)
+at org.junit.Assert.assertEquals(Assert.java:118)
+at org.junit.Assert.assertEquals(Assert.java:144)
+at com.example.lunchtray.NavigationTests.navigate_to_start_order_from_entree_menu(NavigationTests.kt:83)
+
+INSTRUMENTATION_STATUS: stream=
+Error in navigate_to_start_order_from_entree_menu(com.example.lunchtray.NavigationTests):
+java.lang.AssertionError: expected:<2131231205> but was:<2131231204>
+at org.junit.Assert.fail(Assert.java:88)
+at org.junit.Assert.failNotEquals(Assert.java:834)
+at org.junit.Assert.assertEquals(Assert.java:118)
+at org.junit.Assert.assertEquals(Assert.java:144)
+at com.example.lunchtray.NavigationTests.navigate_to_start_order_from_entree_menu(NavigationTests.kt:83)
+
+INSTRUMENTATION_STATUS: test=navigate_to_start_order_from_entree_menu
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=navigate_to_checkout_from_accompaniment_menu
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=3
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=navigate_to_checkout_from_accompaniment_menu
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stream=
+INSTRUMENTATION_STATUS: test=navigate_to_entree_menu_from_start_order
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at androidx.navigation.fragment.NavHostFragment$Companion.findNavController(NavHostFragment.kt:394)
+at androidx.navigation.fragment.FragmentKt.findNavController(Fragment.kt:29)
+at com.example.lunchtray.ui.order.StartOrderFragment.onCreateView(StartOrderFragment.kt:54)
+at androidx.fragment.app.Fragment.performCreateView(Fragment.java:2995)
+at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:523)
+at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:261)
+at androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:1840)
+at androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:1758)
+at androidx.fragment.app.FragmentManager.execSingleAction(FragmentManager.java:1670)
+at androidx.fragment.app.BackStackRecord.commitNow(BackStackRecord.java:317)
+at androidx.fragment.app.testing.FragmentScenario$Companion.internalLaunch$lambda-2(FragmentScenario.kt:628)
+at androidx.fragment.app.testing.FragmentScenario$Companion.$r8$lambda$qQn68eFQCuWOFZCsJdZ7z8QDNvM(Unknown Source:0)
+at androidx.fragment.app.testing.FragmentScenario$Companion$$ExternalSyntheticLambda0.perform(Unknown Source:13)
+at androidx.test.core.app.ActivityScenario.lambda$onActivity$2$ActivityScenario(ActivityScenario.java:660)
+at androidx.test.core.app.ActivityScenario$$Lambda$4.run(ActivityScenario.java:652)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2223)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loop(Looper.java:223)
+at android.app.ActivityThread.main(ActivityThread.java:7656)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+
+INSTRUMENTATION_STATUS: stream=
+Error in navigate_to_entree_menu_from_start_order(com.example.lunchtray.NavigationTests):
+java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at androidx.navigation.fragment.NavHostFragment$Companion.findNavController(NavHostFragment.kt:394)
+at androidx.navigation.fragment.FragmentKt.findNavController(Fragment.kt:29)
+at com.example.lunchtray.ui.order.StartOrderFragment.onCreateView(StartOrderFragment.kt:54)
+at androidx.fragment.app.Fragment.performCreateView(Fragment.java:2995)
+at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:523)
+at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:261)
+at androidx.fragment.app.FragmentManager.executeOpsTogether(FragmentManager.java:1840)
+at androidx.fragment.app.FragmentManager.removeRedundantOperationsAndExecute(FragmentManager.java:1758)
+at androidx.fragment.app.FragmentManager.execSingleAction(FragmentManager.java:1670)
+at androidx.fragment.app.BackStackRecord.commitNow(BackStackRecord.java:317)
+at androidx.fragment.app.testing.FragmentScenario$Companion.internalLaunch$lambda-2(FragmentScenario.kt:628)
+at androidx.fragment.app.testing.FragmentScenario$Companion.$r8$lambda$qQn68eFQCuWOFZCsJdZ7z8QDNvM(Unknown Source:0)
+at androidx.fragment.app.testing.FragmentScenario$Companion$$ExternalSyntheticLambda0.perform(Unknown Source:13)
+at androidx.test.core.app.ActivityScenario.lambda$onActivity$2$ActivityScenario(ActivityScenario.java:660)
+at androidx.test.core.app.ActivityScenario$$Lambda$4.run(ActivityScenario.java:652)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2223)
+at android.os.Handler.handleCallback(Handler.java:938)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at android.os.Looper.loop(Looper.java:223)
+at android.app.ActivityThread.main(ActivityThread.java:7656)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+
+INSTRUMENTATION_STATUS: test=navigate_to_entree_menu_from_start_order
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at androidx.navigation.fragment.NavHostFragment$Companion.findNavController(NavHostFragment.kt:394)
+at androidx.navigation.fragment.FragmentKt.findNavController(Fragment.kt:29)
+at com.example.lunchtray.ui.order.StartOrderFragment.onCreateView(StartOrderFragment.kt:54)
+at androidx.fragment.app.Fragment.performCreateView(Fragment.java:2995)
+at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:523)
+at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:261)
+at androidx.fragment.app.FragmentStore.moveToExpectedState(FragmentStore.java:113)
+at androidx.fragment.app.FragmentManager.moveToState(FragmentManager.java:1374)
+at androidx.fragment.app.FragmentManager.dispatchStateChange(FragmentManager.java:2841)
+at androidx.fragment.app.FragmentManager.dispatchPause(FragmentManager.java:2802)
+at androidx.fragment.app.FragmentController.dispatchPause(FragmentController.java:295)
+at androidx.fragment.app.FragmentActivity.onPause(FragmentActivity.java:366)
+at android.app.Activity.performPause(Activity.java:8168)
+at android.app.Instrumentation.callActivityOnPause(Instrumentation.java:1510)
+at androidx.test.runner.MonitoringInstrumentation.callActivityOnPause(MonitoringInstrumentation.java:768)
+at android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:4735)
+at android.app.ActivityThread.performPauseActivity(ActivityThread.java:4696)
+at android.app.ActivityThread.handlePauseActivity(ActivityThread.java:4647)
+at android.app.servertransaction.PauseActivityItem.execute(PauseActivityItem.java:46)
+at android.app.servertransaction.TransactionExecutor.executeLifecycleState(TransactionExecutor.java:176)
+at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:97)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2066)
+at android.os.Handler.dispatchMessage(Handler.java:106)
+at android.os.Looper.loop(Looper.java:223)
+at android.app.ActivityThread.main(ActivityThread.java:7656)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+
+INSTRUMENTATION_STATUS: stream=
+Process crashed while executing navigate_to_entree_menu_from_start_order(com.example.lunchtray.NavigationTests):
+java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at androidx.navigation.fragment.NavHostFragment$Companion.findNavController(NavHostFragment.kt:394)
+at androidx.navigation.fragment.FragmentKt.findNavController(Fragment.kt:29)
+at com.example.lunchtray.ui.order.StartOrderFragment.onCreateView(StartOrderFragment.kt:54)
+at androidx.fragment.app.Fragment.performCreateView(Fragment.java:2995)
+at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:523)
+at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:261)
+at androidx.fragment.app.FragmentStore.moveToExpectedState(FragmentStore.java:113)
+at androidx.fragment.app.FragmentManager.moveToState(FragmentManager.java:1374)
+at androidx.fragment.app.FragmentManager.dispatchStateChange(FragmentManager.java:2841)
+at androidx.fragment.app.FragmentManager.dispatchPause(FragmentManager.java:2802)
+at androidx.fragment.app.FragmentController.dispatchPause(FragmentController.java:295)
+at androidx.fragment.app.FragmentActivity.onPause(FragmentActivity.java:366)
+at android.app.Activity.performPause(Activity.java:8168)
+at android.app.Instrumentation.callActivityOnPause(Instrumentation.java:1510)
+at androidx.test.runner.MonitoringInstrumentation.callActivityOnPause(MonitoringInstrumentation.java:768)
+at android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:4735)
+at android.app.ActivityThread.performPauseActivity(ActivityThread.java:4696)
+at android.app.ActivityThread.handlePauseActivity(ActivityThread.java:4647)
+at android.app.servertransaction.PauseActivityItem.execute(PauseActivityItem.java:46)
+at android.app.servertransaction.TransactionExecutor.executeLifecycleState(TransactionExecutor.java:176)
+at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:97)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2066)
+at android.os.Handler.dispatchMessage(Handler.java:106)
+at android.os.Looper.loop(Looper.java:223)
+at android.app.ActivityThread.main(ActivityThread.java:7656)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+
+INSTRUMENTATION_STATUS: test=navigate_to_entree_menu_from_start_order
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_STATUS: class=com.example.lunchtray.NavigationTests
+INSTRUMENTATION_STATUS: current=4
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=9
+INSTRUMENTATION_STATUS: stack=java.lang.RuntimeException: Unable to pause activity {com.example.lunchtray/androidx.fragment.app.testing.FragmentScenario$EmptyFragmentActivity}: java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:4745)
+at android.app.ActivityThread.performPauseActivity(ActivityThread.java:4696)
+at android.app.ActivityThread.handlePauseActivity(ActivityThread.java:4647)
+at android.app.servertransaction.PauseActivityItem.execute(PauseActivityItem.java:46)
+at android.app.servertransaction.TransactionExecutor.executeLifecycleState(TransactionExecutor.java:176)
+at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:97)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2066)
+at android.os.Handler.dispatchMessage(Handler.java:106)
+at android.os.Looper.loop(Looper.java:223)
+at android.app.ActivityThread.main(ActivityThread.java:7656)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+Caused by: java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at androidx.navigation.fragment.NavHostFragment$Companion.findNavController(NavHostFragment.kt:394)
+at androidx.navigation.fragment.FragmentKt.findNavController(Fragment.kt:29)
+at com.example.lunchtray.ui.order.StartOrderFragment.onCreateView(StartOrderFragment.kt:54)
+at androidx.fragment.app.Fragment.performCreateView(Fragment.java:2995)
+at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:523)
+at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:261)
+at androidx.fragment.app.FragmentStore.moveToExpectedState(FragmentStore.java:113)
+at androidx.fragment.app.FragmentManager.moveToState(FragmentManager.java:1374)
+at androidx.fragment.app.FragmentManager.dispatchStateChange(FragmentManager.java:2841)
+at androidx.fragment.app.FragmentManager.dispatchPause(FragmentManager.java:2802)
+at androidx.fragment.app.FragmentController.dispatchPause(FragmentController.java:295)
+at androidx.fragment.app.FragmentActivity.onPause(FragmentActivity.java:366)
+at android.app.Activity.performPause(Activity.java:8168)
+at android.app.Instrumentation.callActivityOnPause(Instrumentation.java:1510)
+at androidx.test.runner.MonitoringInstrumentation.callActivityOnPause(MonitoringInstrumentation.java:768)
+at android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:4735)
+... 12 more
+
+INSTRUMENTATION_STATUS: stream=
+Process crashed while executing navigate_to_entree_menu_from_start_order(com.example.lunchtray.NavigationTests):
+java.lang.RuntimeException: Unable to pause activity {com.example.lunchtray/androidx.fragment.app.testing.FragmentScenario$EmptyFragmentActivity}: java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:4745)
+at android.app.ActivityThread.performPauseActivity(ActivityThread.java:4696)
+at android.app.ActivityThread.handlePauseActivity(ActivityThread.java:4647)
+at android.app.servertransaction.PauseActivityItem.execute(PauseActivityItem.java:46)
+at android.app.servertransaction.TransactionExecutor.executeLifecycleState(TransactionExecutor.java:176)
+at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:97)
+at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2066)
+at android.os.Handler.dispatchMessage(Handler.java:106)
+at android.os.Looper.loop(Looper.java:223)
+at android.app.ActivityThread.main(ActivityThread.java:7656)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+Caused by: java.lang.IllegalStateException: Fragment StartOrderFragment{6c1d0ea} (5e112956-a9ec-43f7-952f-96193388a5d2 id=0x1020002 tag=FragmentScenario_Fragment_Tag) does not have a NavController set
+at androidx.navigation.fragment.NavHostFragment$Companion.findNavController(NavHostFragment.kt:394)
+at androidx.navigation.fragment.FragmentKt.findNavController(Fragment.kt:29)
+at com.example.lunchtray.ui.order.StartOrderFragment.onCreateView(StartOrderFragment.kt:54)
+at androidx.fragment.app.Fragment.performCreateView(Fragment.java:2995)
+at androidx.fragment.app.FragmentStateManager.createView(FragmentStateManager.java:523)
+at androidx.fragment.app.FragmentStateManager.moveToExpectedState(FragmentStateManager.java:261)
+at androidx.fragment.app.FragmentStore.moveToExpectedState(FragmentStore.java:113)
+at androidx.fragment.app.FragmentManager.moveToState(FragmentManager.java:1374)
+at androidx.fragment.app.FragmentManager.dispatchStateChange(FragmentManager.java:2841)
+at androidx.fragment.app.FragmentManager.dispatchPause(FragmentManager.java:2802)
+at androidx.fragment.app.FragmentController.dispatchPause(FragmentController.java:295)
+at androidx.fragment.app.FragmentActivity.onPause(FragmentActivity.java:366)
+at android.app.Activity.performPause(Activity.java:8168)
+at android.app.Instrumentation.callActivityOnPause(Instrumentation.java:1510)
+at androidx.test.runner.MonitoringInstrumentation.callActivityOnPause(MonitoringInstrumentation.java:768)
+at android.app.ActivityThread.performPauseActivityIfNeeded(ActivityThread.java:4735)
+... 12 more
+
+INSTRUMENTATION_STATUS: test=navigate_to_entree_menu_from_start_order
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: shortMsg=Process crashed.
+INSTRUMENTATION_CODE: 0
+
